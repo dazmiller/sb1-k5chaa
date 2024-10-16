@@ -1,0 +1,25 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Apartment Building SaaS"
+theme = "apartment-theme"
+
+[params]
+  description = "Manage your apartment building with ease"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Apartments"
+    url = "/apartments"
+    weight = 2
+  [[menu.main]]
+    name = "Tenants"
+    url = "/tenants"
+    weight = 3
+  [[menu.main]]
+    name = "Maintenance"
+    url = "/maintenance"
+    weight = 4

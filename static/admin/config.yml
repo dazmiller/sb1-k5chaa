@@ -1,0 +1,44 @@
+backend:
+  name: github
+  repo: username/apartment-saas # Replace with your GitHub username and repository name
+  branch: main
+
+media_folder: "static/images"
+public_folder: "/images"
+
+collections:
+  - name: "apartments"
+    label: "Apartments"
+    folder: "content/apartments"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Number", name: "number", widget: "string"}
+      - {label: "Floor", name: "floor", widget: "number"}
+      - {label: "Bedrooms", name: "bedrooms", widget: "number"}
+      - {label: "Bathrooms", name: "bathrooms", widget: "number"}
+      - {label: "Square Feet", name: "square_feet", widget: "number"}
+      - {label: "Monthly Rent", name: "monthly_rent", widget: "number"}
+      - {label: "Description", name: "description", widget: "text"}
+
+  - name: "tenants"
+    label: "Tenants"
+    folder: "content/tenants"
+    create: true
+    fields:
+      - {label: "Name", name: "title", widget: "string"}
+      - {label: "Apartment Number", name: "apartment", widget: "string"}
+      - {label: "Move-in Date", name: "move_in_date", widget: "date"}
+      - {label: "Lease End Date", name: "lease_end_date", widget: "date"}
+      - {label: "Contact Information", name: "contact_info", widget: "text"}
+
+  - name: "maintenance"
+    label: "Maintenance Requests"
+    folder: "content/maintenance"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Apartment Number", name: "apartment", widget: "string"}
+      - {label: "Date Reported", name: "date_reported", widget: "datetime"}
+      - {label: "Description", name: "description", widget: "text"}
+      - {label: "Status", name: "status", widget: "select", options: ["Open", "In Progress", "Completed"]}
